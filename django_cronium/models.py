@@ -22,9 +22,9 @@ class CronJobLog(models.Model):
     def __unicode__(self):
         return '%s (%s)' % (self.code, 'Success' if self.is_success else 'Fail')
 
-    class Meta:
-        index_together = [
-            ('code', 'is_success', 'ran_at_time'),
-            ('code', 'start_time', 'ran_at_time'),
-            ('code', 'start_time')  # useful when finding latest run (order by start_time) of cron
-        ]
+    #class Meta:
+    #    index_together = [
+    #        ('code', 'is_success', 'ran_at_time'),
+    #        ('code', 'start_time', 'ran_at_time'),
+    #        ('code', 'start_time')  # useful when finding latest run (order by start_time) of cron
+    #    ]
