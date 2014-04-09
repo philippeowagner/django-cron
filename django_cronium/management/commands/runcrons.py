@@ -6,12 +6,12 @@ import traceback
 from django.core.management.base import BaseCommand
 from django.conf import settings
 from django.core.cache import cache
-from django_cron import CronJobManager
+from django_cronium import CronJobManager
 try:
     from django.utils import timezone
 except ImportError:
     # timezone added in Django 1.4
-    from django_cron import timezone
+    from django_cronium import timezone
 from django.db import close_connection
 
 

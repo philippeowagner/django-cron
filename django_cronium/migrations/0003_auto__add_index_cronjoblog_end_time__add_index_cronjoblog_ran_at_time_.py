@@ -9,34 +9,34 @@ class Migration(SchemaMigration):
 
     def forwards(self, orm):
         # Adding index on 'CronJobLog', fields ['end_time']
-        db.create_index(u'django_cron_cronjoblog', ['end_time'])
+        db.create_index(u'django_cronium_cronjoblog', ['end_time'])
 
         # Adding index on 'CronJobLog', fields ['ran_at_time', 'is_success', 'code']
-        db.create_index(u'django_cron_cronjoblog', ['ran_at_time', 'is_success', 'code'])
+        db.create_index(u'django_cronium_cronjoblog', ['ran_at_time', 'is_success', 'code'])
 
         # Adding index on 'CronJobLog', fields ['ran_at_time', 'start_time', 'code']
-        db.create_index(u'django_cron_cronjoblog', ['ran_at_time', 'start_time', 'code'])
+        db.create_index(u'django_cronium_cronjoblog', ['ran_at_time', 'start_time', 'code'])
 
         # Adding index on 'CronJobLog', fields ['start_time', 'code']
-        db.create_index(u'django_cron_cronjoblog', ['start_time', 'code'])
+        db.create_index(u'django_cronium_cronjoblog', ['start_time', 'code'])
 
 
     def backwards(self, orm):
         # Removing index on 'CronJobLog', fields ['start_time', 'code']
-        db.delete_index(u'django_cron_cronjoblog', ['start_time', 'code'])
+        db.delete_index(u'django_cronium_cronjoblog', ['start_time', 'code'])
 
         # Removing index on 'CronJobLog', fields ['ran_at_time', 'start_time', 'code']
-        db.delete_index(u'django_cron_cronjoblog', ['ran_at_time', 'start_time', 'code'])
+        db.delete_index(u'django_cronium_cronjoblog', ['ran_at_time', 'start_time', 'code'])
 
         # Removing index on 'CronJobLog', fields ['ran_at_time', 'is_success', 'code']
-        db.delete_index(u'django_cron_cronjoblog', ['ran_at_time', 'is_success', 'code'])
+        db.delete_index(u'django_cronium_cronjoblog', ['ran_at_time', 'is_success', 'code'])
 
         # Removing index on 'CronJobLog', fields ['end_time']
-        db.delete_index(u'django_cron_cronjoblog', ['end_time'])
+        db.delete_index(u'django_cronium_cronjoblog', ['end_time'])
 
 
     models = {
-        u'django_cron.cronjoblog': {
+        u'django_cronium.cronjoblog': {
             'Meta': {'object_name': 'CronJobLog', 'index_together': "[('code', 'is_success', 'ran_at_time'), ('code', 'start_time', 'ran_at_time'), ('code', 'start_time')]"},
             'code': ('django.db.models.fields.CharField', [], {'max_length': '64', 'db_index': 'True'}),
             'end_time': ('django.db.models.fields.DateTimeField', [], {'db_index': 'True'}),
@@ -48,4 +48,4 @@ class Migration(SchemaMigration):
         }
     }
 
-    complete_apps = ['django_cron']
+    complete_apps = ['django_cronium']

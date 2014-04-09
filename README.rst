@@ -3,7 +3,7 @@ Adopted and adapted version => django-cronium
 
 
 install using
-pip install -e git+https://github.com/philippeowagner/django-cronium.git#egg=django_cronium-master
+pip install -e git+https://github.com/philippeowagner/django-cronium.git#egg=django_croniumium-master
 
 ===========
 django-cron
@@ -73,20 +73,20 @@ in your CronJob class.
 Installation
 ------------
 
-- Install django_cron (ideally in your virtualenv!) using pip or simply getting a copy of the code and putting it in a directory in your codebase.
+- Install django_cronium (ideally in your virtualenv!) using pip or simply getting a copy of the code and putting it in a directory in your codebase.
 
-- Add ``django_cron`` to your Django settings ``INSTALLED_APPS``::
+- Add ``django_cronium`` to your Django settings ``INSTALLED_APPS``::
 
     INSTALLED_APPS = [
         # ...
-        "django_cron",
+        "django_cronium",
     ]
 
-- If you're using South for schema migrations run ``python manage.py migrate django_cron`` or simply do a ``syncdb``.
+- If you're using South for schema migrations run ``python manage.py migrate django_cronium`` or simply do a ``syncdb``.
 
 - Write a cron class somewhere in your code, that extends the `CronJobBase` class. This class will look something like this::
 
-    from django_cron import CronJobBase, Schedule
+    from django_cronium import CronJobBase, Schedule
     class MyCronJob(CronJobBase):
         RUN_EVERY_MINS = 120 # every 2 hours
 
@@ -111,7 +111,7 @@ FailedRunsNotificationCronJob
 This example cron check last cron jobs results. If they were unsuccessfull 10 times in row, it sends email to user.
 
 - Install required dependencies: 'Django>=1.4.0', 'South>=0.7.2', 'django-common>=0.5.1'.
-- Add 'django_cron.cron.FailedRunsNotificationCronJob' to your CRON_CLASSES in settings file.
+- Add 'django_cronium.cron.FailedRunsNotificationCronJob' to your CRON_CLASSES in settings file.
 
 - To set up minimal number of failed runs set up MIN_NUM_FAILURES in your cron class (default = 10). For example::
 

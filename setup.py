@@ -34,7 +34,7 @@ setup(
      #   'South>=0.8.1',
         'django-common-helpers>=0.5.1'
     ],
-    test_suite='django_cronium.tests',
+    test_suite='django_croniumium.tests',
     include_package_data=True,
     # cmdclass={},
     classifiers=[

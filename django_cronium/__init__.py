@@ -3,7 +3,7 @@ from datetime import timedelta, datetime
 import traceback
 import time
 
-from django_cron.models import CronJobLog
+from django_cronium.models import CronJobLog
 
 try:
     from django.utils import timezone

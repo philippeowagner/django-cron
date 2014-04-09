@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from django_cron.models import CronJobLog
+from django_cronium.models import CronJobLog
 
 
 class CronJobLogAdmin(admin.ModelAdmin):

@@ -11,7 +11,7 @@ else:
     DATABASE_ENGINE = 'sqlite3'
 
 INSTALLED_APPS = [
-    'django_cron',
+    'django_cronium',
 ]
 
 SECRET_KEY = "wknfgl34qtnjo&Yk3jqfjtn2k3jtnk4wtnk"
