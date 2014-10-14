@@ -3,7 +3,10 @@ Adopted and adapted version => django-cronium
 
 
 install using
-pip install -e git+https://github.com/philippeowagner/django-cronium.git#egg=django_cronium-master
+    
+    pip install -e git+https://github.com/philippeowagner/django-cronium.git#egg=django_cronium-master
+    python manage.py migrate django_cronium --fake
+
 
 ===========
 django-cron
