@@ -20,7 +20,7 @@ f.close()
 
 setup(
     name='django-cronium',
-    version='0.3.4',
+    version='0.3.5',
     author='Sumit Chachra/arteria GmbH',
     author_email='chachra@tivix.com',
     url='http://github.com/philippeowagner/django-cronium',
