@@ -7,14 +7,15 @@ from django.core.management.base import BaseCommand
 from django.conf import settings
 from django.core.cache import cache
 from django_cronium import CronJobManager
+
+from django.utils import timezone
+
+# TODO: add to compat
 try:
-    from django.utils import timezone
+    from django.db import close_old_connections as close_connection    
 except ImportError:
-    # timezone added in Django 1.4
-    from django_cronium import timezone
-from django.db import close_connection
-
-
+    from django.db import close_connection # old Django version < 1.8
+    
 DEFAULT_LOCK_TIME = 24 * 60 * 60  # 24 hours
 
 

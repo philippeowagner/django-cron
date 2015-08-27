@@ -4,12 +4,7 @@ import traceback
 import time
 
 from django_cronium.models import CronJobLog
-
-try:
-    from django.utils import timezone
-except ImportError:
-    # timezone added in Django 1.4
-    import timezone
+from django.utils import timezone
 
 
 class Schedule(object):
