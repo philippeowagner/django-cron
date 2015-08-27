@@ -1,9 +1,9 @@
 from django.conf import settings
+from django.core.mail import send_mail
+
 from django_cronium import CronJobBase, Schedule
 from django_cronium.models import CronJobLog
 from django_cronium.management.commands.runcrons import get_class
-
-from django_common.helper import send_mail
 
 
 class FailedRunsNotificationCronJob(CronJobBase):

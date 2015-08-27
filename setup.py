@@ -20,8 +20,8 @@ f.close()
 
 setup(
     name='django-cronium',
-    version='0.3.3',
-    author='Sumit Chachra',
+    version='0.3.4',
+    author='Sumit Chachra/arteria GmbH',
     author_email='chachra@tivix.com',
     url='http://github.com/philippeowagner/django-cronium',
     description='Running python crons in a Django project',
@@ -32,7 +32,7 @@ setup(
     install_requires=[
        # 'Django>=1.5.0',
      #   'South>=0.8.1',
-        'django-common-helpers>=0.5.1'
+       # 'django-common-helpers>=0.5.1'
     ],
     test_suite='django_cronium.tests',
     include_package_data=True,

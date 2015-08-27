@@ -28,3 +28,5 @@ class CronJobLog(models.Model):
     #        ('code', 'start_time', 'ran_at_time'),
     #        ('code', 'start_time')  # useful when finding latest run (order by start_time) of cron
     #    ]
+
+ 
